@@ -1,0 +1,34 @@
+{
+  "name": "mymovielist",
+  "version": "1.0.0",
+  "description": "Find info of any movie, add them to your watch list, like them, and many many many more!",
+  "main": "app.ts",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ts-node": "^9.1.0",
+    "typescript": "^4.1.2"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "start": "ts-node app.ts",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilvenLEAF/MyMovieList.git"
+  },
+  "keywords": [
+    "SilvenLEAF",
+    "Movie"
+  ],
+  "author": "SilvenLEAF",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SilvenLEAF/MyMovieList/issues"
+  },
+  "homepage": "https://github.com/SilvenLEAF/MyMovieList#readme"
+}
