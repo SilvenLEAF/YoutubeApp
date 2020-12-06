@@ -59,7 +59,9 @@ app.get('*', (req: Request, res: Response, next: NextFunction)=>{
 
 
 // ERRORS HANDLER
-app.use((err: any, req: Request, res: Response)=>{
+app.use((errorObjectWithRequestAndResponse: {err: any, req: Request, res: Response})=>{
+  const {err, req, res} = errorObjectWithRequestAndResponse;
+  
   console.log(chalk.red(err.message));
   console.log(err);
 
