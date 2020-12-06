@@ -51,6 +51,15 @@ import './config/mongodbConfig'
 /* -----------------------------------------
 .                   routes
 ----------------------------------------- */
+
+
+
+//                  mail routes
+import ContactRoute from './routes/mailRoutes/ContactRoute'
+app.use(ContactRoute);
+
+
+
 // CATCH-ALL HANDLER
 app.get('*', (req: Request, res: Response, next: NextFunction)=>{
   res.sendFile(path.join(__dirname, 'client/build/index.html'));
