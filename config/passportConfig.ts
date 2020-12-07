@@ -4,7 +4,7 @@ import User from '../models/User';
 
 
 
-
+import DemoStrategy from './passportStrategies/DemoStrategy';
 import LoginStrategy from './passportStrategies/LoginStrategy';
 import SignupStrategy from './passportStrategies/SignupStrategy';
 
@@ -42,3 +42,4 @@ passport.deserializeUser((id, done)=>{
 ------------------------------------ */
 passport.use('local-signup', SignupStrategy);
 passport.use('local-login', LoginStrategy);
+passport.use('demo', DemoStrategy)
