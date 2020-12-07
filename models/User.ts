@@ -1,4 +1,5 @@
 import mongoose, { Schema } from 'mongoose'
+import UserInterface from '../interfaces/DataBaseInterface';
 
 
 
@@ -169,4 +170,4 @@ const UserSchema: Schema = new mongoose.Schema({
 /* ------------------------------------------
 .                USER MODEL
 ------------------------------------------ */
-export default mongoose.model('User', UserSchema);
+export default mongoose.model<UserInterface>('User', UserSchema);
