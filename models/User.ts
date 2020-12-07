@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose'
-import UserInterface from '../interfaces/DataBaseInterface';
+import UserInterface from '../interfaces/databaseInterfaces/UserInterface';
 
 
 

@@ -75,12 +75,12 @@ interface LocalInterface {
   password: string,
   
     
-  resetToken: string,
-  resetTokenExpires: Date,
+  resetToken?: string,
+  resetTokenExpires?: Date,
   
   
-  verificationToken: string,
-  verificationTokenExpires: Date,
+  verificationToken?: string,
+  verificationTokenExpires?: Date,
   
   
   
@@ -122,10 +122,10 @@ export default interface UserInterface extends Document {
 
   username: string,
   profileImage: string,
-  createdAt: string,
-  role: string,
-  isVerified: boolean,
-  email: string,
+  createdAt: Date,
+  role?: string,
+  isVerified?: boolean,
+  email?: string,
 
 
 
