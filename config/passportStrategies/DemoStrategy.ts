@@ -42,7 +42,7 @@ export default new Strategy(
 
 
       // if the user already have an account
-      if(user) return done(null, user);
+      if(user) return done(undefined, user);
 
 
 
@@ -76,7 +76,7 @@ export default new Strategy(
 
 
         
-      }).then(newUser=> done(null, newUser)); // Send it onto the Cookie-fyer. (IN REACT) send the  (err, user, info) onto the passport middleware used on the auth route
+      }).then(newUser=> done(undefined, newUser)); // Send it onto the Cookie-fyer. (IN REACT) send the  (err, user, info) onto the passport middleware used on the auth route
       
     })
   }

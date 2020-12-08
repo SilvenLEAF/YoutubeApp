@@ -43,7 +43,7 @@ interface GithubInterface {
 
 interface LinkedinInterface {
   linkedinId: string,
-  email: string,
+  email?: string,
   username: string,
   profileImage: string,
 };

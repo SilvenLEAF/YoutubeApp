@@ -26,7 +26,7 @@ export default new Strategy(
 
 
       // if the user already exists, retrieve the account
-      if(existingUser) return done(null, existingUser);
+      if(existingUser) return done(undefined, existingUser);
 
 
 
@@ -49,7 +49,7 @@ export default new Strategy(
 
 
         
-      }).then(newUser=> done(null, newUser));
+      }).then(newUser=> done(undefined, newUser));
 
 
 

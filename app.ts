@@ -66,6 +66,7 @@ app.use(passport.session());
 .                   config
 ----------------------------------------- */
 import './config/mongodbConfig'
+import './config/passportConfig'
 
 
 
@@ -76,6 +77,8 @@ import './config/mongodbConfig'
 .                   routes
 ----------------------------------------- */
 //                  auth routes
+import oauthRoute from './routes/authRoutes/oauthRoute';
+app.use(oauthRoute);
 import authRoute from './routes/authRoutes/authRoute';
 app.use(authRoute);
 import userRoute from './routes/authRoutes/userRoute';

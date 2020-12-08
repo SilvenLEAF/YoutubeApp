@@ -63,9 +63,9 @@ passport.use('demo', DemoStrategy);
 
 
 
-passport.use(GoogleStrategy);
-passport.use(GithubStrategy);
-passport.use(LinkedinStrategy);
+passport.use('google', GoogleStrategy);
+passport.use('github', GithubStrategy);
+passport.use('linkedin', LinkedinStrategy);
 
 
 
