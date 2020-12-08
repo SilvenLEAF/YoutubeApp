@@ -79,7 +79,7 @@ import './config/mongodbConfig'
 import authRoute from './routes/authRoutes/authRoute';
 app.use(authRoute);
 import userRoute from './routes/authRoutes/userRoute';
-app.use(userRoute);
+app.use('/user', userRoute);
 
 
 
