@@ -11,6 +11,20 @@ import SignupStrategy from './passportStrategies/SignupStrategy';
 
 
 
+
+
+import GithubStrategy from './passportStrategies/GithubStrategy';
+import GoogleStrategy from './passportStrategies/GoogleStrategy';
+import LinkedinStrategy from './passportStrategies/LinkedinStrategy';
+//  import TwitterStrategy from './passportStrategies/TwitterStrategy';
+
+
+
+
+
+
+
+
 /* ------------------------------------
 .     SERIALIZE AND DESERIALIZE
 ------------------------------------ */
@@ -42,4 +56,18 @@ passport.deserializeUser((id, done)=>{
 ------------------------------------ */
 passport.use('local-signup', SignupStrategy);
 passport.use('local-login', LoginStrategy);
-passport.use('demo', DemoStrategy)
+passport.use('demo', DemoStrategy);
+
+
+
+
+
+
+passport.use(GoogleStrategy);
+passport.use(GithubStrategy);
+passport.use(LinkedinStrategy);
+
+
+
+
+// passport.use(TwitterStrategy);
