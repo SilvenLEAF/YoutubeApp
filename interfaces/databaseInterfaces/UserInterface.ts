@@ -76,11 +76,11 @@ interface LocalInterface {
   
     
   resetToken?: string,
-  resetTokenExpires?: Date,
+  resetTokenExpires?: number,
   
   
   verificationToken?: string,
-  verificationTokenExpires?: Date,
+  verificationTokenExpires?: number,
   
   
   
