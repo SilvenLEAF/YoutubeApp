@@ -87,8 +87,10 @@ app.use('/user', userRoute);
 
 
 //                  mail routes
-import ContactRoute from './routes/mailRoutes/ContactRoute'
-app.use(ContactRoute);
+import contactRoute from './routes/mailRoutes/ContactRoute'
+app.use(contactRoute);
+import resetPasswordRoute from './routes/mailRoutes/ResetPasswordRoute'
+app.use(resetPasswordRoute);
 import verifyEmailRoute from './routes/mailRoutes/VerifyEmailRoute'
 app.use(verifyEmailRoute);
 
