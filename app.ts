@@ -89,7 +89,8 @@ app.use('/user', userRoute);
 //                  mail routes
 import ContactRoute from './routes/mailRoutes/ContactRoute'
 app.use(ContactRoute);
-
+import verifyEmailRoute from './routes/mailRoutes/VerifyEmailRoute'
+app.use(verifyEmailRoute);
 
 
 // CATCH-ALL HANDLER
