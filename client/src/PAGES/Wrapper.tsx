@@ -4,15 +4,15 @@ import { Route, Switch, useLocation } from 'react-router-dom';
 
 
 
-import Login from '../components/auth.js/signupLogin/Login';
-import Signup from '../components/auth.js/signupLogin/Signup';
-import LogInForm from '../components/auth.js/signupLogin/LogInForm';
-import SignUpForm from '../components/auth.js/signupLogin/SignUpForm';
+import Login from '../components/auth/signupLogin/Login';
+import Signup from '../components/auth/signupLogin/Signup';
+import LogInForm from '../components/auth/signupLogin/LogInForm';
+import SignUpForm from '../components/auth/signupLogin/SignUpForm';
 
 
-import ForgottenForm from '../components/auth.js/reset/ForgottenForm';
-import ResetPassword from '../components/auth.js/reset/ResetPassword';
-import VerifyDoor from '../components/auth.js/verify/VerifyDoor';
+import ForgottenForm from '../components/auth/reset/ForgottenForm';
+import ResetPassword from '../components/auth/reset/ResetPassword';
+import VerifyDoor from '../components/auth/verify/VerifyDoor';
 
 
 import Home from '../components/home/Home'
@@ -23,8 +23,8 @@ import UpdateProfile from '../components/profile/UpdateProfile';
 import UserProfile from '../components/profile/UserProfile';
 import ActionPage from '../components/actionPage/ActionPage';
 
-import VerifyEmail from '../components/auth.js/verify/VerifyEmail';
-import ChangeEmail from '../components/auth.js/verify/ChangeEmail';
+import VerifyEmail from '../components/auth/verify/VerifyEmail';
+import ChangeEmail from '../components/auth/verify/ChangeEmail';
 
 
 
