@@ -24,7 +24,7 @@ function Home() {
       <div id="myLandingIcon"></div>
       <div className="myLandingContentHolder">
         <h1 id="myLandingTitle" className="pageTitle">
-          LingHun7.0
+          MyMovieList
         </h1>
         
         <div className="myLandingDescription">
