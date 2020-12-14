@@ -100,7 +100,7 @@ app.use(verifyEmailRoute);
 
 //                  MAIN  routes
 import mainRoute from './routes/MainRoute'
-app.use(mainRoute);
+app.use('/movie', mainRoute);
  
 
 

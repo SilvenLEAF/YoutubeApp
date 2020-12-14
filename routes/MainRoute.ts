@@ -12,7 +12,7 @@ const router = Router();
 
 
 
-router.get('/movie', movieController.get_one_movie)
+router.post('/', movieController.get_one_movie)
 
 
 
