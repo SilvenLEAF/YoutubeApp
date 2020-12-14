@@ -95,6 +95,16 @@ import verifyEmailRoute from './routes/mailRoutes/VerifyEmailRoute'
 app.use(verifyEmailRoute);
 
 
+
+
+
+//                  MAIN  routes
+import mainRoute from './routes/MainRoute'
+app.use(mainRoute);
+ 
+
+
+
 // CATCH-ALL HANDLER
 app.get('*', (req: Request, res: Response, next: NextFunction)=>{
   res.sendFile(path.join(__dirname, 'client/build/index.html'));
