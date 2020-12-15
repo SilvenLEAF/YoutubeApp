@@ -1,3 +1,7 @@
+// fake data
+import FakeData from '../../helpers/FakeData/FakeData'
+
+
 import M from 'materialize-css'
 import '../../styles/movie/MovieDetails.scss';
 
@@ -20,6 +24,8 @@ function MovieDetails() {
   }, [])
 
 
+  const item = FakeData.movieDetailsData;
+  
   
   return (
     <div className="container" >
