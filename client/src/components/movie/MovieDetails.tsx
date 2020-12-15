@@ -121,10 +121,20 @@ function MovieDetails() {
       </p>
 
       <div className="myProfileBtnsHolder myBtnsHolder right-align">
-          <Link to="/similarMovies" className="btn myBtn waves-effect waves-light myCornerless"><i className="fa fa-anchor"></i> Similar Movies</Link>
-          <Link to="/" className="btn mySecondaryBtn waves-effect waves-light myCornerless">Go back <i className="fa fa-arrow-left"></i></Link>
-          
-        </div>
+        <Link to="/similarMovies" className="btn myBtn waves-effect waves-light myCornerless"><i className="fa fa-list"></i> Add to WatchList</Link>
+        <Link to="/" className="btn myRedBtn waves-effect waves-light myCornerless"><i className="fa fa-heart"></i> Add to Liked List</Link>
+
+        
+        <Link to="/similarMovies" className="btn myBtn waves-effect waves-light myCornerless"><i className="fa fa-anchor"></i> Similar Movies</Link>
+        <Link to="/" className="btn mySecondaryBtn waves-effect waves-light myCornerless">Go back <i className="fa fa-arrow-left"></i></Link>
+
+        
+      </div>
+
+
+      
+
+
     </div>
 
 
