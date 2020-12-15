@@ -99,8 +99,8 @@ app.use(verifyEmailRoute);
 
 
 //                  MAIN  routes
-import mainRoute from './routes/MainRoute'
-app.use('/movie', mainRoute);
+import movieRoute from './routes/MovieRoute'
+app.use('/movie', movieRoute);
  
 
 

@@ -10,9 +10,9 @@ import * as imdb from 'imdb-api'
 ------------------------------------ */
 export const get_one_movie = async (req: Request, res: Response, next: NextFunction)=>{
   try {
-    const { movieName } = req.body;
+    // const { movieName } = req.body;
 
-    const movie = await imdb!.get({name: movieName }, {apiKey: process.env.IMDB_API_KEY, timeout: 30000});
+    const movie = await imdb.search({name: `Frozen II` }, {apiKey: process.env.IMDB_API_KEY, timeout: 30000});
     
     
     res.json(movie);    
