@@ -25,6 +25,7 @@ import ActionPage from '../components/actionPage/ActionPage';
 
 import VerifyEmail from '../components/auth/verify/VerifyEmail';
 import ChangeEmail from '../components/auth/verify/ChangeEmail';
+import MovieDetails from '../components/movie/MovieDetails';
 
 
 
@@ -63,6 +64,14 @@ function Wrapper() {
         <Route path="/userProfile/:index" component={UserProfile} />
         <Route path="/allUsers" component={UserList} />
         <Route path="/contact" component={Contact} />
+
+
+
+
+
+
+        <Route path="/movieDetails" component={MovieDetails} />
+
 
 
 
