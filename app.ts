@@ -1,5 +1,4 @@
 // modules to help developing
-import dotenv from 'dotenv';     // to laod development variables on development mode
 import chalk from 'chalk';      // chalk makes colorful console.logs only to make our development easier
 
 
@@ -8,7 +7,7 @@ import chalk from 'chalk';      // chalk makes colorful console.logs only to mak
 
 if(process.env.NODE_ENV !== 'production'){
   // if we are on developemnt, load the development variables
-  dotenv.config();
+  require('dotenv').config();
 }
 
 
@@ -84,7 +83,7 @@ app.use(authRoute);
 import userRoute from './routes/authRoutes/userRoute';
 app.use('/user', userRoute);
 
-
+ 
 
 //                  mail routes
 import contactRoute from './routes/mailRoutes/ContactRoute'
