@@ -25,8 +25,10 @@ import ActionPage from '../components/actionPage/ActionPage';
 
 import VerifyEmail from '../components/auth/verify/VerifyEmail';
 import ChangeEmail from '../components/auth/verify/ChangeEmail';
-import MovieDetails from '../components/movie/MovieDetails';
 
+
+import MovieDetails from '../components/movie/MovieDetails';
+import SearchPage from '../components/movie/search/SearchPage'
 
 
 
@@ -41,7 +43,7 @@ function Wrapper() {
 
         <Route exact path="/" component={Home} />
         
-        <Route path="/actionPage" component={ActionPage} />
+        <Route path="/actionPage" component={SearchPage} />
         
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
