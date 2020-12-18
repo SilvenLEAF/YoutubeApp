@@ -72,7 +72,7 @@ function Wrapper() {
 
 
 
-        <Route path="/movieDetails" component={MovieDetails} />
+        <Route path="/movieDetails/:id" component={MovieDetails} />
 
 
 

@@ -8,13 +8,20 @@ import '../../styles/movie/MovieDetails.scss';
 
 
 import React, { useEffect, useContext, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
  
  
 
 import { AuthContext } from '../../contexts/subContexts/AuthContext'
-import MyWelcome from '../../helpers/MyWelcome'
+import MovieDataInterface from '../../interfaces/MovieDataInterface'
+import Secrets from '../../secrets/Secrets'
+import MyLoader from '../../helpers/MyLoader'
 
+
+
+interface paramsInterface {
+  id: string
+}
 
 
 
@@ -23,16 +30,36 @@ function MovieDetails() {
     M.AutoInit();
   }, [])
 
-
-  const item = FakeData.movieDetailsData;
   
-
   const { userData } = useContext(AuthContext);
+  
+  
+  // const item = FakeData.movieDetailsData;
+  const [item, setItem] = useState<MovieDataInterface>();
+  const { id } = useParams<paramsInterface>()
 
   
-  return (
+  useEffect(()=>{
+    const getMovieDetails = async () =>{
+      const response = await fetch(`${ Secrets.MovieDB_API_ROOT_URL }/movie/${ id }?api_key=${ Secrets.MovieDB_API_KEY }`)
+      const data = await response.json();
+
+      setItem(data);
+    };
+
+    getMovieDetails();
+  }, [])
+
+
+  const movieImage = item && item.poster_path ? "https://image.tmdb.org/t/p/w185" + item.poster_path : "/Logo.png";
+  
+  return !item ? (
+    <div className="myLoaderPageHolder">
+      <MyLoader/>
+    </div>
+  ) : (
     <div className="container myProfilePage" >
-      <div className="mainProfileIcon" style={{ background: `url(https://image.tmdb.org/t/p/w185${ item!.poster_path || "/Logo.png" }) center/cover`}} ></div>
+      <div className="mainProfileIcon" style={{ background: `url(${ movieImage }) center/cover`}} ></div>
 
       <div className="myProfileMainHeader">
         <div className="myProfileUserName">{ item!.title }</div>

@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react'
-import MovieDataInterface from '../../../interfaces/MovieData';
+import MovieDataInterface from '../../../interfaces/MovieDataInterface';
 
 
 

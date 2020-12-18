@@ -43,12 +43,7 @@ function SearchForm(props: propsInterface) {
 
     setLoading(true);
 
-    Toast.fire({
-      icon: 'info',
-      title: 'Please wait...'
-    })
-
-  
+      
     try {
       const response = await fetch(`${ Secrets.MovieDB_API_ROOT_URL }/search/movie?query=${ movieName }&api_key=${ Secrets.MovieDB_API_KEY }`)
       
