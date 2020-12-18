@@ -29,6 +29,8 @@ import ChangeEmail from '../components/auth/verify/ChangeEmail';
 
 import SearchMovieDetails from '../components/movie/search/SearchMovieDetails';
 import SearchPage from '../components/movie/search/SearchPage'
+import SimilarMovieDetails from '../components/movie/similar/SimilarMovieDetails'
+import SimilarMovies from '../components/movie/similar/SimilarMovies'
 
 
 
@@ -74,6 +76,8 @@ function Wrapper() {
 
         <Route path="/search" component={SearchPage} />
         <Route path="/searchMovieDetails/:id" component={SearchMovieDetails} />
+        <Route path="/similarMovies/:id" component={SimilarMovies} />
+        <Route path="/similarMovieDetails/:id" component={SimilarMovieDetails} />
 
 
 

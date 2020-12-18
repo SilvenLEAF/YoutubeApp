@@ -1,6 +1,7 @@
 import React from 'react'
 import AllUserContextProvider from './subContexts/AllUserContext'
 import MovieSearchContextProvider from './subContexts/movieContexts/MovieSearchContext'
+import SimilarMovieContextProvider from './subContexts/movieContexts/SimilarMovieContext'
 
 
 
@@ -17,8 +18,11 @@ function RootContext(props: propsInterface) {
       
       <AllUserContextProvider>
         <MovieSearchContextProvider>
-        
-          { props.children }
+          <SimilarMovieContextProvider>
+            
+            { props.children }
+            
+          </SimilarMovieContextProvider>
 
         </MovieSearchContextProvider>
       </AllUserContextProvider>
