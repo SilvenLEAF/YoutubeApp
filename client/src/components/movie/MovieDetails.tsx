@@ -8,7 +8,7 @@ import '../../styles/movie/MovieDetails.scss';
 
 
 import React, { useEffect, useContext, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
  
  
 
@@ -19,13 +19,13 @@ import MyLoader from '../../helpers/MyLoader'
 
 
 
-interface paramsInterface {
+interface propsInterface {
+  backURL: string,
   id: string
 }
 
 
-
-function MovieDetails() {
+function MovieDetails(props: propsInterface) {
   useEffect(()=>{
     M.AutoInit();
   }, [])
@@ -36,12 +36,12 @@ function MovieDetails() {
   
   // const item = FakeData.movieDetailsData;
   const [item, setItem] = useState<MovieDataInterface>();
-  const { id } = useParams<paramsInterface>()
+  
 
   
   useEffect(()=>{
     const getMovieDetails = async () =>{
-      const response = await fetch(`${ Secrets.MovieDB_API_ROOT_URL }/movie/${ id }?api_key=${ Secrets.MovieDB_API_KEY }`)
+      const response = await fetch(`${ Secrets.MovieDB_API_ROOT_URL }/movie/${ props.id }?api_key=${ Secrets.MovieDB_API_KEY }`)
       const data = await response.json();
 
       setItem(data);
@@ -162,7 +162,7 @@ function MovieDetails() {
 
             
             <Link to="/similarMovies" className="btn myBtn waves-effect waves-light myCornerless"><i className="fa fa-anchor"></i> Similar Movies</Link>
-            <Link to="/" className="btn mySecondaryBtn waves-effect waves-light myCornerless">Go back <i className="fa fa-arrow-left"></i></Link>
+            <Link to={ props.backURL } className="btn mySecondaryBtn waves-effect waves-light myCornerless">Go back <i className="fa fa-arrow-left"></i></Link>
 
             
           </div>

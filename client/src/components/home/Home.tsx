@@ -32,8 +32,8 @@ function Home() {
         </div>
 
         <div className="myLandingBtnHolder">
-          <Link to="/actionPage" className="btn myBtn waves-effect waves-light myLandingBtn" >
-            Ling Hun Action Button
+          <Link to="/search" className="btn myBtn waves-effect waves-light myLandingBtn" >
+            <i className="fa fa-search"></i> Search MOVIE
           </Link>
         </div>
       </div>

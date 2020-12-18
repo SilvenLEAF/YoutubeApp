@@ -57,7 +57,7 @@ function SearchResultHolder(props: propsInterface) {
         {
           allSearchMovies[0] && allSearchMovies.map((item, index)=>{
             return (
-              <Link to={ "/movieDetails/" + item.id } key={ index } >
+              <Link to={ "/searchMovieDetails/" + item.id } key={ index } >
                 <MovieListItem item={ item } />
               </Link>
             )
