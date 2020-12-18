@@ -1,5 +1,7 @@
 import React from 'react'
 import AllUserContextProvider from './subContexts/AllUserContext'
+import MovieSearchContextProvider from './subContexts/movieContexts/MovieSearchContext'
+
 
 
 
@@ -14,7 +16,11 @@ function RootContext(props: propsInterface) {
     <>
       
       <AllUserContextProvider>
-        { props.children }
+        <MovieSearchContextProvider>
+        
+          { props.children }
+
+        </MovieSearchContextProvider>
       </AllUserContextProvider>
     
     </>
