@@ -9,7 +9,7 @@ import M from 'materialize-css'
 
 
 import React, { useEffect, useContext, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
  
  
 
@@ -40,10 +40,11 @@ function SimilarMovieDetails() {
   const { id } = useParams<paramsInterface>()
 
   
+  const backBtn= <Link to="/search" className="btn mySecondaryBtn waves-effect waves-light myCornerless"><i className="fa fa-search"></i> Search Movie</Link>
   
   return (
     <>
-        <MovieDetails id={ id } backURL="/similarMovies" />
+        <MovieDetails id={ id } backBtn={ backBtn } />
     </>
   )
 }

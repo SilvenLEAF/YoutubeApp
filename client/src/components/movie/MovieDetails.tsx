@@ -21,9 +21,9 @@ import MyLoader from '../../helpers/MyLoader'
 
 
 
-interface propsInterface {
-  backURL: string,
-  id: string
+interface propsInterface {  
+  id: string,
+  backBtn?: React.ReactNode
 }
 
 
@@ -192,7 +192,8 @@ function MovieDetails(props: propsInterface) {
 
             
             <Link to="/similarMovies/" className="btn myBtn waves-effect waves-light myCornerless"><i className="fa fa-anchor"></i> Similar Movies</Link>
-            <Link to={ props.backURL } className="btn mySecondaryBtn waves-effect waves-light myCornerless">Go back <i className="fa fa-arrow-left"></i></Link>
+            
+            { props.backBtn }
 
             
           </div>
