@@ -35,6 +35,12 @@ function Home() {
           <Link to="/search" className="btn myBtn waves-effect waves-light myLandingBtn" >
             <i className="fa fa-search"></i> Search MOVIE
           </Link>
+          <Link to="/trendingMovies" className="btn myBtn waves-effect waves-light myLandingBtn" >
+            <i className="fas fa-chart-line"></i> TRENDING Movies
+          </Link>
+          <Link to="/TopMovies" className="btn myBtn waves-effect waves-light myLandingBtn" >
+            <i className="fa fa-star"></i> TOP Movies
+          </Link>
         </div>
       </div>
       
