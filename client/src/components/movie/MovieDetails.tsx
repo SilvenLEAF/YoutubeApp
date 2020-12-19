@@ -182,7 +182,7 @@ function MovieDetails(props: propsInterface) {
 
           <div className="myProfileBtnsHolder myBtnsHolder right-align">
             { 
-              userData && (
+              !5 && (
                 <>
                   <Link to="/similarMovies" className="btn myBtn waves-effect waves-light myCornerless"><i className="fa fa-list"></i> Add to WatchList</Link>
                   <Link to="/" className="btn myRedBtn waves-effect waves-light myCornerless"><i className="fa fa-heart"></i> Add to Liked List</Link>
