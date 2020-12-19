@@ -27,8 +27,8 @@ function SignedInFooterLinks() {
 
       <div>
         <div className="myFooterIcons">
-          <Link to="/actionPage" >
-          <i className="fa fa-cogs"></i> LING
+          <Link to="/search" >
+          <i className="fa fa-search"></i> Search
           </Link>
         </div>          
       </div>

@@ -11,6 +11,12 @@ export const SignedOutMobileLinks = () => {
   return (
     <>
       <li><NavLink to="/" className="sidenav-close" ><i className="fa fa-home"></i>Home</NavLink></li>
+
+      <li><NavLink to="/search" className="sidenav-close" ><i className="fa fa-search"></i>Search</NavLink></li>
+      <li><NavLink to="/trendingMovies" className="sidenav-close" ><i className="fas fa-chart-line"></i>Trending now</NavLink></li>
+      <li><NavLink to="/topMovies" className="sidenav-close" ><i className="fa fa-star"></i>Top movies</NavLink></li>
+
+      
       <li><NavLink to="/login" className="sidenav-close" ><i className="fa fa-user"></i>Log in</NavLink></li>
       <li><NavLink to="/signup" className="sidenav-close" ><i className="fa fa-user-plus"></i>Sign up</NavLink></li>
       <li><NavLink to="/contact" className="sidenav-close" ><i className="fa fa-envelope"></i>Contact Me</NavLink></li>

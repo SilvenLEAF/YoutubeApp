@@ -38,6 +38,11 @@ export const SignedInMobileLinks = (props: propsInterface) => {
   return (
     <>
       <li><NavLink to="/" className="sidenav-close" ><i className="fa fa-home"></i>Home</NavLink></li>      
+
+      <li><NavLink to="/search" className="sidenav-close" ><i className="fa fa-search"></i>Search</NavLink></li>
+      <li><NavLink to="/trendingMovies" className="sidenav-close" ><i className="fas fa-chart-line"></i>Trending now</NavLink></li>
+      <li><NavLink to="/topMovies" className="sidenav-close" ><i className="fa fa-star"></i>Top movies</NavLink></li>
+
       <li><NavLink to="/profile" className="sidenav-close" ><i className="fa fa-user"></i>Profile</NavLink></li>
       <li><NavLink to="/allUsers" className="sidenav-close" ><i className="fa fa-users"></i>All Users</NavLink></li>
       <li><NavLink to="/contact" className="sidenav-close" ><i className="fa fa-envelope"></i>Contact Me</NavLink></li>
