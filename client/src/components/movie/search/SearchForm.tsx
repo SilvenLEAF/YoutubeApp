@@ -47,20 +47,19 @@ function SearchForm(props: propsInterface) {
     try {
       const response = await fetch(`${ Secrets.MovieDB_API_ROOT_URL }/search/movie?query=${ movieName }&api_key=${ Secrets.MovieDB_API_KEY }`)
       
-      console.log("response", response)
-      
+            
       const data = await response.json();
-      console.log("data", data)
+      
       
 
-      if(!data.results || !data.results[0]){
-        setLoading(false);
-
-
-      } else {
+      if(data && data.results && data.results[0]){
+        
         setMovieName('');
         setAllSearchMovies(data.results);    
         
+      } else {
+        
+        setLoading(false);
       
                 
 
