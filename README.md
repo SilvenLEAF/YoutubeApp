@@ -1,5 +1,5 @@
 # MyMovieList
-Find info of any movie, add them to your watch list, like them, and many many many more!
+Find info of any movie, get similar movies, trending now and top movies, add them to your watch list, like them, and many many many more! Create your own MovieList!!
 
 ***
 
