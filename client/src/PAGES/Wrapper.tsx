@@ -76,7 +76,7 @@ function Wrapper() {
 
         <Route path="/search" component={SearchPage} />
         <Route path="/searchMovieDetails/:id" component={SearchMovieDetails} />
-        <Route path="/similarMovies/:id" component={SimilarMovies} />
+        <Route path="/similarMovies" component={SimilarMovies} />
         <Route path="/similarMovieDetails/:id" component={SimilarMovieDetails} />
 
 

@@ -43,7 +43,7 @@ function SimilarMovieDetails() {
   
   return (
     <>
-        <MovieDetails id={ id } backURL="/similar" />
+        <MovieDetails id={ id } backURL="/similarMovies" />
     </>
   )
 }

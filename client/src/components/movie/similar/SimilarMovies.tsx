@@ -11,7 +11,6 @@ import { Link, useParams } from 'react-router-dom';
 
 
 
-import Secrets from '../../../secrets/Secrets'
 import { SimilarMovieContext } from '../../../contexts/subContexts/movieContexts/SimilarMovieContext'
 
 
@@ -44,34 +43,14 @@ function SimilarMovies() {
   }, [])
 
 
+  
 
-  const { id } = useParams<paramsInterface>()
-
-  const { allSimilarMovies, setAllSimilarMovies } = useContext(SimilarMovieContext)
-  const [loading, setLoading] = useState(true)
-
+  const { allSimilarMovies, setAllSimilarMovies, loading, setLoading } = useContext(SimilarMovieContext)
+  
 
 
-  useEffect(()=>{
-    const getMovieDetails = async () =>{
-      const response = await fetch(`${ Secrets.MovieDB_API_ROOT_URL }/movie/${ id }?api_key=${ Secrets.MovieDB_API_KEY }`)
-      const data = await response.json();
 
-
-      if(!data.results || !data.results[0]){
-        setLoading(false);
-
-
-      } else {
-        setAllSimilarMovies(data.results);
-
-      }
-
-
-    };
-
-    getMovieDetails();
-  }, [])
+  
 
 
 

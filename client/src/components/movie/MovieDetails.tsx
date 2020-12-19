@@ -13,6 +13,8 @@ import { Link } from 'react-router-dom'
  
 
 import { AuthContext } from '../../contexts/subContexts/AuthContext'
+import { SimilarMovieContext } from '../../contexts/subContexts/movieContexts/SimilarMovieContext'
+
 import MovieDataInterface from '../../interfaces/MovieDataInterface'
 import Secrets from '../../secrets/Secrets'
 import MyLoader from '../../helpers/MyLoader'
@@ -32,6 +34,7 @@ function MovieDetails(props: propsInterface) {
 
   
   const { userData } = useContext(AuthContext);
+  const { setAllSimilarMovies, setLoading } = useContext(SimilarMovieContext);
   
   
   // const item = FakeData.movieDetailsData;
@@ -48,6 +51,33 @@ function MovieDetails(props: propsInterface) {
     };
 
     getMovieDetails();
+  }, []);
+
+
+
+
+
+
+  // GET SIMILAR MOVIES
+  useEffect(()=>{
+    const getSimilarMovieDetails = async () =>{
+      const response = await fetch(`${ Secrets.MovieDB_API_ROOT_URL }/movie/${ props.id }/similar?api_key=${ Secrets.MovieDB_API_KEY }`)
+      const data = await response.json();
+
+
+      if(!data.results || !data.results[0]){
+        setLoading(false);
+
+
+      } else {
+        setAllSimilarMovies(data.results);
+
+      }
+
+
+    };
+
+    getSimilarMovieDetails();
   }, [])
 
 
@@ -161,7 +191,7 @@ function MovieDetails(props: propsInterface) {
             }
 
             
-            <Link to={ "/similarMovies/" + item.id } className="btn myBtn waves-effect waves-light myCornerless"><i className="fa fa-anchor"></i> Similar Movies</Link>
+            <Link to="/similarMovies/" className="btn myBtn waves-effect waves-light myCornerless"><i className="fa fa-anchor"></i> Similar Movies</Link>
             <Link to={ props.backURL } className="btn mySecondaryBtn waves-effect waves-light myCornerless">Go back <i className="fa fa-arrow-left"></i></Link>
 
             

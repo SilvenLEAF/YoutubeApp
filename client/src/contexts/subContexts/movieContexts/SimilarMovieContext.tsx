@@ -7,7 +7,10 @@ import MovieDataInterface from '../../../interfaces/MovieDataInterface';
 
 interface similarMovieContextInterface {
     allSimilarMovies: MovieDataInterface[] | undefined,
-    setAllSimilarMovies: Function
+    setAllSimilarMovies: Function,
+
+    loading: boolean,
+    setLoading: Function
 }
 
 
@@ -30,8 +33,9 @@ export const SimilarMovieContext = createContext({} as similarMovieContextInterf
 
 function SimilarMovieContextProvider(props: propsInterface) {
   const [allSimilarMovies, setAllSimilarMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
   return (
-    <SimilarMovieContext.Provider value={{ allSimilarMovies, setAllSimilarMovies }} >
+    <SimilarMovieContext.Provider value={{ allSimilarMovies, setAllSimilarMovies, loading, setLoading }} >
       { props.children }
     </SimilarMovieContext.Provider>
   )
