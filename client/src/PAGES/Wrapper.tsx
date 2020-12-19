@@ -31,6 +31,10 @@ import SearchMovieDetails from '../components/movie/search/SearchMovieDetails';
 import SearchPage from '../components/movie/search/SearchPage'
 import SimilarMovieDetails from '../components/movie/similar/SimilarMovieDetails'
 import SimilarMovies from '../components/movie/similar/SimilarMovies'
+import TrendingMovies from '../components/movie/trending/TrendingMovies';
+import TrendingMovieDetails from '../components/movie/trending/TrendingMovieDetails';
+import TopMovies from '../components/movie/top/TopMovies';
+import TopMovieDetails from '../components/movie/top/TopMovieDetails';
 
 
 
@@ -76,10 +80,19 @@ function Wrapper() {
 
         <Route path="/search" component={SearchPage} />
         <Route path="/searchMovieDetails/:id" component={SearchMovieDetails} />
+        
+        
         <Route path="/similarMovies" component={SimilarMovies} />
         <Route path="/similarMovieDetails/:id" component={SimilarMovieDetails} />
 
 
+        <Route path="/trendingMovies" component={TrendingMovies} />
+        <Route path="/trendingMovieDetails/:id" component={TrendingMovieDetails} />
+        
+        
+        
+        <Route path="/topMovies" component={TopMovies} />
+        <Route path="/topMovieDetails/:id" component={TopMovieDetails} />
 
 
 

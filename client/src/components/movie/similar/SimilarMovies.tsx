@@ -26,12 +26,6 @@ import MyWelcome from '../../../helpers/MyWelcome';
 
 
 
-interface paramsInterface {
-  id: string
-}
-
-
-
 
 
 
@@ -54,8 +48,17 @@ function SimilarMovies() {
 
 
 
-  const loadingOrNull = loading ? <MyLoader/> : <MyWelcome title="No movie found:(" />;
-
+  
+  const loadingOrNull = loading ?
+  (
+      <div className="myLoaderPageHolder">
+          <MyLoader/>
+      </div>
+  ) : (
+      <div className="myLoaderPageHolder">        
+          <MyWelcome title="No movie found:(" />
+      </div>
+  );
   
   
   

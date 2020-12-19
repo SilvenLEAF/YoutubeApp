@@ -8,7 +8,10 @@ import MovieDataInterface from '../../../interfaces/MovieDataInterface';
 
 interface movieTrendingContextInterface {
     trendingMovies: MovieDataInterface[] | undefined,
-    setTrendingMovies: Function
+    setTrendingMovies: Function,
+
+    trendingLoading: boolean,
+    setTrendingLoading: Function
 }
 
 

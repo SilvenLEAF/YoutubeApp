@@ -33,6 +33,10 @@ function App() {
   const [userData, setUserData] = useState<UserDataInterface>();
   const [trendingMovies, setTrendingMovies] = useState<MovieDataInterface[]>();
   const [topMovies, setTopMovies] = useState<MovieDataInterface[]>();
+
+
+  const [trendingLoading, setTrendingLoading] = useState(true);
+  const [topLoading, setTopLoading] = useState(true);
   
   // GET LOGGED IN USER
   useEffect(()=>{
@@ -66,11 +70,11 @@ function App() {
       console.log("data", data)
       
 
-      if(!data.results || !data.results[0]){
-        
+      if(data && data.results && data.results[0]){
         setTrendingMovies(data.results);    
-                
-
+        
+      } else {
+        setTrendingLoading(false);       
       }
 
     }
@@ -91,14 +95,16 @@ function App() {
       console.log("response", response)
       
       const data = await response.json();
-      console.log("data", data)
+      
       
 
-      if(!data.results || !data.results[0]){
+      if(data && data.results && data.results[0]){
         
         setTopMovies(data.results);    
                 
 
+      } else {
+        setTopLoading(false);
       }
 
     }
@@ -113,8 +119,8 @@ function App() {
   return (
     <BrowserRouter basename="/">
       <AuthContext.Provider value={{ userData, setUserData }} >
-        <MovieTrendingContext.Provider value={{ trendingMovies, setTrendingMovies }} >
-          <MovieTopContext.Provider value={{topMovies, setTopMovies}} >
+        <MovieTrendingContext.Provider value={{ trendingMovies, setTrendingMovies, trendingLoading, setTrendingLoading }} >
+          <MovieTopContext.Provider value={{ topMovies, setTopMovies, topLoading, setTopLoading }} >
 
 
             <RootContext >

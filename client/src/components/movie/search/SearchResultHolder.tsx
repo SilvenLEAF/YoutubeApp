@@ -44,7 +44,6 @@ function SearchResultHolder(props: propsInterface) {
 
 
   const loadingOrNull = props.loading ? <MyLoader/> : <MyWelcome title="No movie found:(" />;
-
   
   
   

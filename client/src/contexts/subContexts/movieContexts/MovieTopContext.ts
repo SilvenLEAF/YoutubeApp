@@ -8,7 +8,11 @@ import MovieDataInterface from '../../../interfaces/MovieDataInterface';
 
 interface movieTopContextInterface {
     topMovies: MovieDataInterface[] | undefined,
-    setTopMovies: Function
+    setTopMovies: Function,
+
+
+    topLoading: boolean,
+    setTopLoading: Function
 }
 
 
