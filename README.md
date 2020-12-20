@@ -63,7 +63,7 @@ First make sure you have NodeJS installed on your PC and your PC has internet co
 
 Then run this command...
 
-```npm start``` or ```node app.js```
+```npm start``` or ```node app.ts```
 
 It will start your local server. Wait until you see these logged on your terminal
 
