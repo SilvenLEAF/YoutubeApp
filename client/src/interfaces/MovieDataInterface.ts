@@ -25,7 +25,7 @@ interface productionCountriesInterface {
 .            MAIN INTERFACE
 ------------------------------------------ */
 export default interface MovieDataInterface {
-    adult: boolean,
+    adult?: boolean,
     backdrop_path?: string,
     "belongs_to_collection"?: any,
     budget?: number,
@@ -66,7 +66,7 @@ export default interface MovieDataInterface {
     "title"?: string,
     "video"?: boolean,
     "vote_average"?: number,
-    "vote_count": number,
+    "vote_count"?: number,
 
 
 
