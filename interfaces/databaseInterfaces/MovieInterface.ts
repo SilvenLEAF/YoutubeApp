@@ -18,7 +18,8 @@ export default interface MovieInterface extends Document {
 
 
   "liked": boolean,
-  
+  "ownerId": any,
+  "createdAt": Date,
 }
 
 
