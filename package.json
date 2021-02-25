@@ -38,7 +38,7 @@
   "scripts": {
     "start": "ts-node app.ts",
     "heroku-postbuild": "cd client && npm install && npm run build",
-    "devStart": "ts-node-dev app.ts"
+    "dev": "ts-node-dev app.ts"
   },
   "repository": {
     "type": "git",
